@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+service SSOVerifyLogin{
+	rpc VerifyLogin(VerifyLoginRequest) returns (VerifyLoginResponse){}
+}
+
+enum Status {
+    OK = 0;
+    Failed = 1;
+}
+
+message VerifyLoginRequest{
+	string UserName = 1;
+	string PassWord = 2;
+}
+
+message VerifyLoginResponse{
+	Status Code = 1;
+	string Message = 2;
+	string Content = 3;
+}
