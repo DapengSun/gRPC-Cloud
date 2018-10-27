@@ -32,7 +32,9 @@ def main():
     server.start()
 
     try:
-        time.sleep(10)
+        # time.sleep(10)
+        while True:
+            time.sleep(60 * 60 * 24)
     except KeyboardInterrupt:
         server.stop(0)
 

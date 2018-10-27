@@ -13,4 +13,4 @@ def main(RequestUrl,TicketId):
 
 if __name__ == '__main__':
     # print(main('https://www.qq.com','adf84108d85211e89864559b0a5fbe9b'))
-    print(main('https://www.qq.com', ''))
+    print(main('https://www.qq.com', 'adf84108d85211e89864559b0a5fbe9b'))
