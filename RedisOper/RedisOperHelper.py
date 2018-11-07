@@ -107,3 +107,24 @@ class RedisOperHelper(object):
     # Hdel 命令用于删除哈希表 key 中的一个或多个指定字段，不存在的字段将被忽略。
     def hashHdel(self,name,*key):
         return self.db.hdel(name,*key)
+
+    # Incrby 命令将 key 中储存的数字加上指定的增量值
+    # 如果 key 不存在，那么 key 的值会先被初始化为 0 ，然后再执行 INCRBY 命令。
+    # 如果值包含错误的类型，或字符串类型的值不能表示为数字，那么返回一个错误。
+    # 本操作的值限制在 64 位(bit)有符号数字表示之内。
+    # 例如：作计数用途
+    def incrby(self,name,key):
+        return self.db.incrby(name,key)
+
+    # HyperLogLog 提供了两个指令 pfadd 和 pfcount，根据字面意义很好理解，一个是增加计数，一个是获取计数。
+    # pfadd 用法和 set 集合的 sadd 是一样的，来一个用户 ID，就将用户 ID 塞进去就是。
+    # pfcount 和 scard 用法是一样的，直接获取计数值...
+    # 例如：用来统计页面UV数量
+    def pfadd(self,key,*values):
+        return self.db.pfadd(key,*values)
+
+    def pfcount(self,key):
+        return self.db.pfcount(key)
+
+    def pfmerge(self,key,*source):
+        return self.db.pfmerge(key,*source)

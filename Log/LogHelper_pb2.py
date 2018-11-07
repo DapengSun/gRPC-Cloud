@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0fLogHelper.proto\"d\n\tInRequest\x12\x0e\n\x06IpAddr\x18\x01 \x01(\t\x12\r\n\x05\x43\x44\x61te\x18\x02 \x01(\t\x12\x18\n\x05Level\x18\x03 \x01(\x0e\x32\t.LogLevel\x12\r\n\x05Title\x18\x04 \x01(\t\x12\x0f\n\x07\x43ontent\x18\x05 \x01(\t\"F\n\x0bOutResponse\x12\x15\n\x04\x43ode\x18\x01 \x01(\x0e\x32\x07.Status\x12\x0f\n\x07Message\x18\x02 \x01(\t\x12\x0f\n\x07\x43ontent\x18\x03 \x01(\t*,\n\x08LogLevel\x12\x08\n\x04INFO\x10\x00\x12\x0b\n\x07WARNING\x10\x01\x12\t\n\x05\x45RROR\x10\x02*\x1c\n\x06Status\x12\x06\n\x02OK\x10\x00\x12\n\n\x06\x46\x61iled\x10\x01\x32\x33\n\tLogHelper\x12&\n\x08WriteLog\x12\n.InRequest\x1a\x0c.OutResponse\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x0fLogHelper.proto\"d\n\tInRequest\x12\x0e\n\x06IpAddr\x18\x01 \x01(\t\x12\r\n\x05\x43\x44\x61te\x18\x02 \x01(\t\x12\x18\n\x05Level\x18\x03 \x01(\x0e\x32\t.LogLevel\x12\r\n\x05Title\x18\x04 \x01(\t\x12\x0f\n\x07\x43ontent\x18\x05 \x01(\t\"=\n\x0bOutResponse\x12\x0c\n\x04\x43ode\x18\x01 \x01(\x05\x12\x0f\n\x07Message\x18\x02 \x01(\t\x12\x0f\n\x07\x43ontent\x18\x03 \x01(\t*,\n\x08LogLevel\x12\x08\n\x04INFO\x10\x00\x12\x0b\n\x07WARNING\x10\x01\x12\t\n\x05\x45RROR\x10\x02\x32\x33\n\tLogHelper\x12&\n\x08WriteLog\x12\n.InRequest\x1a\x0c.OutResponse\"\x00\x62\x06proto3')
 )
 
 _LOGLEVEL = _descriptor.EnumDescriptor(
@@ -44,40 +44,15 @@ _LOGLEVEL = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=193,
-  serialized_end=237,
+  serialized_start=184,
+  serialized_end=228,
 )
 _sym_db.RegisterEnumDescriptor(_LOGLEVEL)
 
 LogLevel = enum_type_wrapper.EnumTypeWrapper(_LOGLEVEL)
-_STATUS = _descriptor.EnumDescriptor(
-  name='Status',
-  full_name='Status',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='OK', index=0, number=0,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='Failed', index=1, number=1,
-      serialized_options=None,
-      type=None),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=239,
-  serialized_end=267,
-)
-_sym_db.RegisterEnumDescriptor(_STATUS)
-
-Status = enum_type_wrapper.EnumTypeWrapper(_STATUS)
 INFO = 0
 WARNING = 1
 ERROR = 2
-OK = 0
-Failed = 1
 
 
 
@@ -149,7 +124,7 @@ _OUTRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='Code', full_name='OutResponse.Code', index=0,
-      number=1, type=14, cpp_type=8, label=1,
+      number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -181,15 +156,13 @@ _OUTRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=121,
-  serialized_end=191,
+  serialized_end=182,
 )
 
 _INREQUEST.fields_by_name['Level'].enum_type = _LOGLEVEL
-_OUTRESPONSE.fields_by_name['Code'].enum_type = _STATUS
 DESCRIPTOR.message_types_by_name['InRequest'] = _INREQUEST
 DESCRIPTOR.message_types_by_name['OutResponse'] = _OUTRESPONSE
 DESCRIPTOR.enum_types_by_name['LogLevel'] = _LOGLEVEL
-DESCRIPTOR.enum_types_by_name['Status'] = _STATUS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 InRequest = _reflection.GeneratedProtocolMessageType('InRequest', (_message.Message,), dict(
@@ -214,8 +187,8 @@ _LOGHELPER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=269,
-  serialized_end=320,
+  serialized_start=230,
+  serialized_end=281,
   methods=[
   _descriptor.MethodDescriptor(
     name='WriteLog',

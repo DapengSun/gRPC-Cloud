@@ -3,7 +3,6 @@
 
 import sys
 _b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
-from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
@@ -20,34 +19,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x14SSOVerifyLogin.proto\"8\n\x12VerifyLoginRequest\x12\x10\n\x08UserName\x18\x01 \x01(\t\x12\x10\n\x08PassWord\x18\x02 \x01(\t\"N\n\x13VerifyLoginResponse\x12\x15\n\x04\x43ode\x18\x01 \x01(\x0e\x32\x07.Status\x12\x0f\n\x07Message\x18\x02 \x01(\t\x12\x0f\n\x07\x43ontent\x18\x03 \x01(\t*\x1c\n\x06Status\x12\x06\n\x02OK\x10\x00\x12\n\n\x06\x46\x61iled\x10\x01\x32L\n\x0eSSOVerifyLogin\x12:\n\x0bVerifyLogin\x12\x13.VerifyLoginRequest\x1a\x14.VerifyLoginResponse\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x14SSOVerifyLogin.proto\"8\n\x12VerifyLoginRequest\x12\x10\n\x08UserName\x18\x01 \x01(\t\x12\x10\n\x08PassWord\x18\x02 \x01(\t\"E\n\x13VerifyLoginResponse\x12\x0c\n\x04\x43ode\x18\x01 \x01(\x05\x12\x0f\n\x07Message\x18\x02 \x01(\t\x12\x0f\n\x07\x43ontent\x18\x03 \x01(\t2L\n\x0eSSOVerifyLogin\x12:\n\x0bVerifyLogin\x12\x13.VerifyLoginRequest\x1a\x14.VerifyLoginResponse\"\x00\x62\x06proto3')
 )
 
-_STATUS = _descriptor.EnumDescriptor(
-  name='Status',
-  full_name='Status',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='OK', index=0, number=0,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='Failed', index=1, number=1,
-      serialized_options=None,
-      type=None),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=162,
-  serialized_end=190,
-)
-_sym_db.RegisterEnumDescriptor(_STATUS)
-
-Status = enum_type_wrapper.EnumTypeWrapper(_STATUS)
-OK = 0
-Failed = 1
 
 
 
@@ -98,7 +72,7 @@ _VERIFYLOGINRESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='Code', full_name='VerifyLoginResponse.Code', index=0,
-      number=1, type=14, cpp_type=8, label=1,
+      number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -130,13 +104,11 @@ _VERIFYLOGINRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=82,
-  serialized_end=160,
+  serialized_end=151,
 )
 
-_VERIFYLOGINRESPONSE.fields_by_name['Code'].enum_type = _STATUS
 DESCRIPTOR.message_types_by_name['VerifyLoginRequest'] = _VERIFYLOGINREQUEST
 DESCRIPTOR.message_types_by_name['VerifyLoginResponse'] = _VERIFYLOGINRESPONSE
-DESCRIPTOR.enum_types_by_name['Status'] = _STATUS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 VerifyLoginRequest = _reflection.GeneratedProtocolMessageType('VerifyLoginRequest', (_message.Message,), dict(
@@ -161,8 +133,8 @@ _SSOVERIFYLOGIN = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=192,
-  serialized_end=268,
+  serialized_start=153,
+  serialized_end=229,
   methods=[
   _descriptor.MethodDescriptor(
     name='VerifyLogin',

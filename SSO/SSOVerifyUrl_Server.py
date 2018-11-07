@@ -18,19 +18,19 @@ class SSOVerifyUrl(SSOVerifyUrl_pb2_grpc.SSOVerifyUrlServicer):
                 _tickinfo = cursor.fetchone()
 
                 if _tickinfo is not None:
-                    return SSOVerifyUrl_pb2.VerifyOutResponse(Code=SSOVerifyUrl_pb2.OK, Message="验证成功", Content=request.TicketId)
+                    return SSOVerifyUrl_pb2.VerifyOutResponse(Code=200, Message="验证成功", Content=request.TicketId)
                 else:
-                    return SSOVerifyUrl_pb2.VerifyOutResponse(Code=SSOVerifyUrl_pb2.Failed, Message="验证失败", Content=_responseUrl)
+                    return SSOVerifyUrl_pb2.VerifyOutResponse(Code=500, Message="验证失败", Content=_responseUrl)
             else:
-                return SSOVerifyUrl_pb2.VerifyOutResponse(Code=SSOVerifyUrl_pb2.Failed,Message="验证失败",Content=_responseUrl)
+                return SSOVerifyUrl_pb2.VerifyOutResponse(Code=500,Message="验证失败",Content=_responseUrl)
         except Exception as ex:
-            return SSOVerifyUrl_pb2.VerifyOutResponse(Code=SSOVerifyUrl_pb2.Failed,Message="验证异常",Content=_responseUrl)
+            return SSOVerifyUrl_pb2.VerifyOutResponse(Code=500,Message="验证异常",Content=_responseUrl)
 
 def main():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=5))
     service = SSOVerifyUrl()
     SSOVerifyUrl_pb2_grpc.add_SSOVerifyUrlServicer_to_server(service,server)
-    server.add_insecure_port("127.0.0.1:8101")
+    server.add_insecure_port("127.0.0.1:8105")
     server.start()
 
     try:

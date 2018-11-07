@@ -4,9 +4,11 @@ import grpc
 import sys
 sys.path.append('..')
 from SSO import SSOVerifyUrl_pb2,SSOVerifyUrl_pb2_grpc
+from CeleryConf import app
 
+@app.task
 def main(RequestUrl,TicketId):
-    _channel = grpc.insecure_channel('127.0.0.1:8101')
+    _channel = grpc.insecure_channel('127.0.0.1:8105')
     _client = SSOVerifyUrl_pb2_grpc.SSOVerifyUrlStub(_channel)
     _outResponse = _client.VerifyUrl(SSOVerifyUrl_pb2.VerifyInRequest(RequestUrl=RequestUrl, TicketId=TicketId))
     return {"Code":_outResponse.Code,"Message":_outResponse.Message,"Content":_outResponse.Content}

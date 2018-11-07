@@ -19,9 +19,9 @@ class LogHelper(LogHelper_pb2_grpc.LogHelperServicer):
             _content = request.Content
             _logId = Tool.GetGuid()
             oper.hashHmset(_logId,{"IpAddr":_ip,"CDate":_cDate,"Level":_level,"Title":_title,"Content":_content})
-            return LogHelper_pb2.OutResponse(Code=LogHelper_pb2.OK,Message="日志记录成功",Content="")
+            return LogHelper_pb2.OutResponse(Code=200,Message="日志记录成功",Content="")
         except Exception as ex:
-            return LogHelper_pb2.OutResponse(Code=LogHelper_pb2.Failed,Message="日志记录异常",Content="")
+            return LogHelper_pb2.OutResponse(Code=500,Message="日志记录异常",Content="")
 
 def main():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=5))
@@ -30,9 +30,9 @@ def main():
     server.add_insecure_port('127.0.0.1:8100')
     server.start()
 
-    # while True:
     try:
-        time.sleep(10)
+        while True:
+            time.sleep(60 * 60 * 24)
     except KeyboardInterrupt:
         server.stop(0)
 
