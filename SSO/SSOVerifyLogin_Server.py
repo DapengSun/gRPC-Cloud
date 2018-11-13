@@ -6,7 +6,8 @@ sys.path.append('..')
 from SSO import SSOVerifyLogin_pb2,SSOVerifyLogin_pb2_grpc,cursor
 from concurrent import futures
 import time
-
+from ConsulConf.ConsulHelper import Register,Unregister
+from ConsulConf import addr_ip
 
 class SSOVerifyLogin(SSOVerifyLogin_pb2_grpc.SSOVerifyLoginServicer):
     def VerifyLogin(self, request, context):
@@ -29,7 +30,8 @@ def main():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=5))
     service = SSOVerifyLogin()
     SSOVerifyLogin_pb2_grpc.add_SSOVerifyLoginServicer_to_server(service,server)
-    server.add_insecure_port('127.0.0.1:8106')
+    server.add_insecure_port(f'{addr_ip}:8106')
+    Register('VerifyLogin_Server',f'{addr_ip}',8106,"2")
     server.start()
 
     try:
@@ -37,6 +39,7 @@ def main():
         while True:
             time.sleep(60 * 60 * 24)
     except KeyboardInterrupt:
+        Unregister("VerifyLogin_Server", f"{addr_ip}", 8106)
         server.stop(0)
 
 if __name__ == '__main__':

@@ -7,6 +7,8 @@ import time
 from SSO import SSOVerifyUrl_pb2,SSOVerifyUrl_pb2_grpc,cursor
 from concurrent import futures
 from SSO import Config
+from ConsulConf.ConsulHelper import Register,Unregister
+from ConsulConf import addr_ip
 
 class SSOVerifyUrl(SSOVerifyUrl_pb2_grpc.SSOVerifyUrlServicer):
     def VerifyUrl(self, request, context):
@@ -30,7 +32,8 @@ def main():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=5))
     service = SSOVerifyUrl()
     SSOVerifyUrl_pb2_grpc.add_SSOVerifyUrlServicer_to_server(service,server)
-    server.add_insecure_port("127.0.0.1:8105")
+    server.add_insecure_port(f"{addr_ip}:8105")
+    Register('VerifyUrl_Server',f'{addr_ip}',8105,"3")
     server.start()
 
     try:
@@ -38,6 +41,7 @@ def main():
         while True:
             time.sleep(60 * 60 * 24)
     except KeyboardInterrupt:
+        Unregister("VerifyUrl_Server", f"{addr_ip}", 8105)
         server.stop(0)
 
 if __name__ == '__main__':

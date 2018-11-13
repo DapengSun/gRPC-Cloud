@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service GrpcConsulHelper{
+	rpc Test(Request) returns (Response){}
+}
+
+message Request{
+	string inString = 1;
+}
+
+message Response{
+ 	string outString = 1;
+}
