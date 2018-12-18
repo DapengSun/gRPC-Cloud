@@ -2,6 +2,7 @@
 
 import redis
 import time
+from EnumType import CommonEnum
 # from RedisOper import db
 
 class RedisOperHelper(object):
@@ -9,6 +10,15 @@ class RedisOperHelper(object):
         # pool = redis.ConnectionPool(host='localhost', port=6379, decode_responses=True)
         # self.db = redis.Redis(connection_pool=pool)
         self.db = db
+
+    # Str操作
+    # set 设置str值
+    def strSet(self, key,val):
+        return self.db.set(key,val)
+
+    # get 返回str值
+    def strGet(self, key):
+        return self.db.get(key)
 
     # 获取所有执行的key值
     def keys(self,pattern):
@@ -128,3 +138,12 @@ class RedisOperHelper(object):
 
     def pfmerge(self,key,*source):
         return self.db.pfmerge(key,*source)
+
+    # 根据SQL生成Key Key - 使用MD5等方式加密生成Key
+    def getSqlKey(self,sqlKey,sql):
+        if sqlKey == CommonEnum.sqlKey.MD5:
+            pass
+
+    # 设置key的过期时间
+    def setKeyExpires(self,key,expires):
+        return self.db.expire(key,expires)

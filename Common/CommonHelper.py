@@ -17,6 +17,10 @@ class Tool(object):
         return uuid.uuid1()
 
     @staticmethod
+    def Json(ResponseStatus,Message,Data):
+        return {"Code":ResponseStatus.value,"Message":Message,"Data":Data}
+
+    @staticmethod
     def JsonResult(ResponseStatus,Message,Data):
         response_data = {}
         response_data['Code'] = ResponseStatus.value

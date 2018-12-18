@@ -31,7 +31,7 @@ def main():
     LogHelper_pb2_grpc.add_LogHelperServicer_to_server(service,server)
     server.add_insecure_port(f'{addr_ip}:8111')
     # 192.168.0.192
-    Register('Log_Server',f'{addr_ip}',8111,"1")
+    # Register('Log_Server',f'{addr_ip}',8111,"1")
     server.start()
 
     try:
@@ -40,6 +40,14 @@ def main():
     except KeyboardInterrupt:
         Unregister("Log_Server", f"{addr_ip}", 8111)
         server.stop(0)
+
+nowTime = lambda : time.strftime('%Y-%m-%d %H:%M:%s',time.localtime())
+filePath = './Log.txt'
+
+def log(title,content):
+    now = nowTime()
+    with open(filePath,'a+') as file:
+        file.writelines(f'{now} - {title} - {content}\n')
 
 if __name__ == '__main__':
     main()

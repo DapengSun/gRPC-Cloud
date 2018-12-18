@@ -1,10 +1,17 @@
 # -*- coding: utf-8 -*-
 
 import sys
+
 sys.path.append('..')
 from ConsulConf import consul_resolver,consul_host,consul_post,beat_check_tcp
 from dns.exception import DNSException
 import consul
+from dns import resolver
+
+# consul_resolver = resolver.Resolver()
+# consul_resolver.port = 8600
+# # consul_resolver.nameservers = ["192.168.0.192"]
+# consul_resolver.nameservers = ["127.0.0.1"]
 
 def Register(server_name, ip, port,service_id):
     c = consul.Consul(host=consul_host,port=consul_post,scheme='http')  # 连接consul 服务器，默认是127.0.0.1，可用host参数指定host
@@ -23,5 +30,6 @@ def GetIpPort(server_name):
         dnsanswer = consul_resolver.query(f'{server_name}.service.consul', "A")
         dnsanswer_srv = consul_resolver.query(f"{server_name}.service.consul", "SRV")
     except DNSException as ex:
-        return ex.msg
+        return None,None
     return dnsanswer[0].address, dnsanswer_srv[0].port
+    # return '192.168.0.192',8111

@@ -6,7 +6,8 @@ from dns import resolver
 # docker run -d -p 8500:8500 -p 8600:8600/udp consul consul agent -data-dir=/consul/data -config-dir=/consul/config -dev -client=0.0.0.0 -bind=0.0.0.0
 
 # 连接服务配置
-consul_host = '192.168.7.121'
+# consul_host = '192.168.0.192'
+consul_host = '192.168.7.151'
 # consul_host = '127.0.0.1'
 consul_post = 8500
 
@@ -20,5 +21,6 @@ consul_resolver.nameservers = ["127.0.0.1"]
 beat_check_tcp = '10s'
 
 # 主机IP地址
-addr_ip = '192.168.7.121'
+# addr_ip = '192.168.0.192'
+addr_ip = '192.168.7.151'
 # addr_ip = '127.0.0.1'

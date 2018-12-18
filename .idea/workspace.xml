@@ -5,11 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94692563-8e25-4e10-a386-213dca16d5d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Common/FlaskHelper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GRPCFlask/Log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GRPCFlask/LogFlask.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GRPCFlask/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GRPCFlask/logClientLog.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GRPCFlask/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RedisOper/RedisOperBase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uWSGI/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uWSGI/logFlask.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/CommonHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/Common/CommonHelper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsulConf/ConsulHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/ConsulConf/ConsulHelper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsulConf/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ConsulConf/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnumType/CommonEnum.py" beforeDir="false" afterPath="$PROJECT_DIR$/EnumType/CommonEnum.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Log/LogHelper_Client.py" beforeDir="false" afterPath="$PROJECT_DIR$/Log/LogHelper_Client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Log/LogHelper_Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Log/LogHelper_Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedisOper/RedisOperHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/RedisOper/RedisOperHelper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedisOper/RedisQueueHelper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedisOper/TestOutQueue.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedisOper/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RedisOper/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSO/SSOVerifyLogin_Client.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSO/SSOVerifyLogin_Client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SSO/SSOVerifyLogin_Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSO/SSOVerifyLogin_Server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SSO/SSOVerifyUrl_Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSO/SSOVerifyUrl_Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSO/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/SSO/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +38,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/GRPCServer$GRPCServer.coverage" NAME="GRPCServer Coverage Results" MODIFIED="1540629302303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SSO" />
-    <SUITE FILE_PATH="coverage/GRPCServer$AsynicoTest.coverage" NAME="AsynicoTest Coverage Results" MODIFIED="1542036446493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Log" />
+    <SUITE FILE_PATH="coverage/GRPCServer$AsynicoTest.coverage" NAME="AsynicoTest Coverage Results" MODIFIED="1545120983388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RedisOper" />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -28,15 +47,18 @@
     <session id="1619116299">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -44,9 +66,10 @@
           <entry key="css" value="1" />
           <entry key="html" value="3" />
           <entry key="http" value="1" />
+          <entry key="ini" value="4" />
           <entry key="js" value="2" />
-          <entry key="py" value="265" />
-          <entry key="txt" value="1" />
+          <entry key="py" value="440" />
+          <entry key="txt" value="54" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -54,72 +77,37 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="3" />
           <entry key="HTTP Request" value="1" />
+          <entry key="Ini" value="4" />
           <entry key="JavaScript" value="2" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="265" />
+          <entry key="PLAIN_TEXT" value="54" />
+          <entry key="Python" value="440" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="81" />
+          <entry key="dummy" value="95" />
           <entry key="html" value="268" />
           <entry key="http" value="4" />
+          <entry key="ini" value="100" />
           <entry key="js" value="195" />
-          <entry key="py" value="15039" />
+          <entry key="py" value="23069" />
+          <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="268" />
           <entry key="HTTP Request" value="4" />
+          <entry key="Ini" value="100" />
           <entry key="JavaScript" value="195" />
-          <entry key="PLAIN_TEXT" value="81" />
-          <entry key="Python" value="15039" />
+          <entry key="PLAIN_TEXT" value="96" />
+          <entry key="Python" value="23069" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ConsulConf/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Log/LogHelper_Client.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-              <folding>
-                <element signature="e#24#54#0" expanded="true" />
-                <marker date="1542036666000" expanded="true" signature="819:820" ph="..." />
-                <marker date="1542036666000" expanded="true" signature="1093:1095" ph="..." />
-                <marker date="1542036666000" expanded="true" signature="1120:1125" ph="..." />
-                <marker date="1542036666000" expanded="true" signature="1120:1429" ph="..." />
-                <marker date="1542036666000" expanded="true" signature="1223:1429" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Log/LogHelper_Server.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-              <folding>
-                <element signature="e#25#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -138,6 +126,21 @@
       <find>incrby</find>
       <find>server_name</find>
       <find>register</find>
+      <find>fp</find>
+      <find>inner</find>
+      <find>request_class</find>
+      <find>Request</find>
+      <find>add_url_rule</find>
+      <find>make_response</find>
+      <find>application</find>
+      <find>ThreadingMixIn</find>
+      <find>ThreadedWSGIServer</find>
+      <find>load_dotenv</find>
+      <find>WSGIRequestHandler</find>
+      <find>logger</find>
+      <find>writelines</find>
+      <find>ex</find>
+      <find>expires</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -146,20 +149,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/RedisOper/RedisQueueHelper.py" />
-        <option value="$PROJECT_DIR$/SSO/__init__.py" />
-        <option value="$PROJECT_DIR$/SSO/SSOHelper.py" />
-        <option value="$PROJECT_DIR$/SSO/SSOHelper_Server.py" />
-        <option value="$PROJECT_DIR$/SSO/SSOVerifyUrl_pb2.py" />
-        <option value="$PROJECT_DIR$/NewHttp.http" />
-        <option value="$PROJECT_DIR$/Page/PageDjango/PageDjango/settings.py" />
-        <option value="$PROJECT_DIR$/Page/PageDjango/SSOPage/views.py" />
-        <option value="$PROJECT_DIR$/Page/PageDjango/PageDjango/urls.py" />
-        <option value="$PROJECT_DIR$/PageDjango/DjangoMain/urls.py" />
-        <option value="$PROJECT_DIR$/PageDjango/PageDjango/settings.py" />
         <option value="$PROJECT_DIR$/PageDjango/Templates/index.html" />
         <option value="$PROJECT_DIR$/PageDjango/PageDjango/urls.py" />
-        <option value="$PROJECT_DIR$/Common/CommonHelper.py" />
         <option value="$PROJECT_DIR$/PageDjango/static/js/Longin.js" />
         <option value="$PROJECT_DIR$/PageDjango/SSOPage/views.py" />
         <option value="$PROJECT_DIR$/SSO/Config.py" />
@@ -170,33 +161,45 @@
         <option value="$PROJECT_DIR$/testclery/celerytask_client.py" />
         <option value="$PROJECT_DIR$/Log/LogApi.py" />
         <option value="$PROJECT_DIR$/CeleryConf/__init__.py" />
-        <option value="$PROJECT_DIR$/EnumType/CommonEnum.py" />
         <option value="$PROJECT_DIR$/LogApi.py" />
         <option value="$PROJECT_DIR$/SSOVerifyApi.py" />
         <option value="$PROJECT_DIR$/SSO/SSOVerifyUrl_Client.py" />
         <option value="$PROJECT_DIR$/Log/LogHelper_pb2_grpc.py" />
         <option value="$PROJECT_DIR$/SSO/SSOVerifyUrl_pb2_grpc.py" />
         <option value="$PROJECT_DIR$/SSO/SSOVerifyLogin_pb2_grpc.py" />
-        <option value="$PROJECT_DIR$/SSO/SSOVerifyLogin_Client.py" />
         <option value="$PROJECT_DIR$/CeleryConf/CeleryConf.py" />
-        <option value="$PROJECT_DIR$/RedisOper/__init__.py" />
-        <option value="$PROJECT_DIR$/RedisOper/RedisOperHelper.py" />
         <option value="$PROJECT_DIR$/SSOVerifyLoginApi.py" />
         <option value="$PROJECT_DIR$/GRPCConsul/GRPCConsulServer.py" />
         <option value="$PROJECT_DIR$/GRPCConsul/GrpcConsul_pb2_grpc.py" />
         <option value="$PROJECT_DIR$/GRPCConsul/GrpcConsulServer.py" />
         <option value="$PROJECT_DIR$/GRPCConsul/GrpcConsulServer_backup.py" />
         <option value="$PROJECT_DIR$/ConsulConf/ConfFunc.py" />
-        <option value="$PROJECT_DIR$/ConsulConf/ConsulHelper.py" />
         <option value="$PROJECT_DIR$/GRPCConsul/GrpcConsulServer_node2.py" />
         <option value="$PROJECT_DIR$/GRPCConsul/GrpcConsulServer_node3.py" />
         <option value="$PROJECT_DIR$/GRPCConsul/GrpcConsulClient.py" />
         <option value="$PROJECT_DIR$/GRPCConsul/GrpcConsulServer_node1.py" />
-        <option value="$PROJECT_DIR$/SSO/SSOVerifyLogin_Server.py" />
-        <option value="$PROJECT_DIR$/SSO/SSOVerifyUrl_Server.py" />
+        <option value="$PROJECT_DIR$/Common/CommonHelper.py" />
+        <option value="$PROJECT_DIR$/Common/Helper.py" />
+        <option value="$PROJECT_DIR$/uWSGI/run.py" />
+        <option value="$PROJECT_DIR$/uWSGI/logFlask.ini" />
+        <option value="$PROJECT_DIR$/ConsulConf/ConsulHelper.py" />
         <option value="$PROJECT_DIR$/Log/LogHelper_Server.py" />
         <option value="$PROJECT_DIR$/Log/LogHelper_Client.py" />
+        <option value="$PROJECT_DIR$/GRPCFlask/logClientLog.txt" />
+        <option value="$PROJECT_DIR$/Common/FlaskHelper.py" />
+        <option value="$PROJECT_DIR$/GRPCFlask/Log.txt" />
+        <option value="$PROJECT_DIR$/GRPCFlask/LogFlask.py" />
+        <option value="$PROJECT_DIR$/GRPCFlask/run.py" />
+        <option value="$PROJECT_DIR$/EnumType/CommonEnum.py" />
+        <option value="$PROJECT_DIR$/RedisOper/RedisOperHelper.py" />
+        <option value="$PROJECT_DIR$/RedisOper/__init__.py" />
+        <option value="$PROJECT_DIR$/SSO/__init__.py" />
         <option value="$PROJECT_DIR$/ConsulConf/__init__.py" />
+        <option value="$PROJECT_DIR$/SSO/SSOVerifyLogin_Server.py" />
+        <option value="$PROJECT_DIR$/SSO/SSOVerifyLogin_Client.py" />
+        <option value="$PROJECT_DIR$/RedisOper/RedisOper.py" />
+        <option value="$PROJECT_DIR$/RedisOper/RedisOperBase.py" />
+        <option value="$PROJECT_DIR$/SSO/SSOVerifyUrl_Server.py" />
       </list>
     </option>
   </component>
@@ -206,7 +209,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="4" />
     <option name="y" value="23" />
     <option name="width" value="1436" />
@@ -283,6 +286,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -293,17 +297,12 @@
             <path>
               <item name="GRPCServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="GRPCServer" type="462c0819:PsiDirectoryNode" />
-              <item name="ConsulConf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GRPCServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GRPCServer" type="462c0819:PsiDirectoryNode" />
-              <item name="GRPCConsul" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GRPCServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GRPCServer" type="462c0819:PsiDirectoryNode" />
               <item name="Log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GRPCServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GRPCServer" type="462c0819:PsiDirectoryNode" />
+              <item name="PageDjango" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GRPCServer" type="b2602c69:ProjectViewProjectNode" />
@@ -315,18 +314,14 @@
               <item name="GRPCServer" type="462c0819:PsiDirectoryNode" />
               <item name="SSO" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="GRPCServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value=":&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs.protractor.protractor_package" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -342,16 +337,17 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/GRPCFlask" />
+      <recent name="$PROJECT_DIR$/PageDjango/Static" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Common" />
       <recent name="$PROJECT_DIR$/GRPCConsul" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/CeleryConf" />
       <recent name="$PROJECT_DIR$/Log" />
-      <recent name="$PROJECT_DIR$/testclery" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/PageDjango/Static" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -375,12 +371,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="$PROJECT_DIR$/../PySpiderVenv/bin/python3.6" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Log" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RedisOper" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Log/LogHelper_Client.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RedisOper/RedisOperBase.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -464,25 +460,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="23" width="1436" height="877" extended-state="1" />
-    <editor active="true" />
+    <frame x="4" y="23" width="1436" height="877" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.223099" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20373027" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24203822" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.40636942" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24203822" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3477707" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3299363" />
       <window_info anchor="bottom" id="Docker" order="7" weight="0.3299363" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.31847134" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50071734" side_tool="true" weight="0.31847134" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49928263" weight="0.31847134" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3299363" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.3299363" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -490,22 +486,23 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22022955" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20373027" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.24203822" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.34649682" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3477707" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3299363" />
       <window_info anchor="bottom" id="Docker" order="7" weight="0.3299363" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.31847134" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50071734" side_tool="true" weight="0.31847134" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49928263" weight="0.31847134" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3299363" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.3299363" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -523,9 +520,54 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Log/LogHelper_Client.py</url>
-          <line>50</line>
-          <option name="timeStamp" value="156" />
+          <url>file://$PROJECT_DIR$/RedisOper/RedisOperBase.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/RedisOper/RedisOperBase.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/RedisOper/RedisOperBase.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/RedisOper/RedisOperBase.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/RedisOper/RedisOperBase.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/RedisOper/RedisOperBase.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/RedisOper/RedisOperBase.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/RedisOper/RedisOperBase.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/RedisOper/RedisOperBase.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/RedisOper/RedisOperBase.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="153" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -533,10 +575,6 @@
       </breakpoints-dialog>
     </breakpoint-manager>
     <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="LogHelper_pb2.OK" language="Python" />
-        <watch expression="_outResponse" language="Python" />
-      </configuration>
       <configuration name="Python.DjangoServer">
         <watch expression="json.dumps(data)" language="Python" />
         <watch expression="str(ex)" language="Python" />
@@ -549,429 +587,415 @@
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
+        <expression-string>cursor.fetchall()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(cursor.fetchall())</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>cursor.fetchall().count()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>_outResponse</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>LogHelper_pb2.OK</expression-string>
+        <expression-string>isinstance(obj,datetime.datetime)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>switch[Level.value]</expression-string>
+        <expression-string>isinstance(obj,type(datetime.datetime))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>switch[Level]</expression-string>
+        <expression-string>isinstance(obj,type(datetime))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>Level</expression-string>
+        <expression-string>isinstance(obj,datetime)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>CommonEnum.LogLevel.INFO.value</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>CommonEnum.LogLevel.INFO</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>switch[LogLevel]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>LogLevel.value</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>LogHelper_pb2.ERROR</expression-string>
+        <expression-string>type(obj)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PageDjango/static/js/Longin.js">
+    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/flask/helpers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+        <state relative-caret-position="300">
+          <caret line="89" column="33" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PageDjango/Templates/index.html">
+    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/encodings/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-257">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="230">
+          <caret line="145" selection-start-line="145" selection-end-line="145" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SSO/__init__.py">
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/logging/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="-200">
+          <caret line="1158" column="8" selection-start-line="1158" selection-start-column="8" selection-end-line="1158" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/asyncio/tasks.py">
+    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/werkzeug/_internal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="467" selection-start-line="467" selection-end-line="467" selection-end-column="10" />
+        <state relative-caret-position="221">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testclery/testadd_pb2_grpc.py" />
-    <entry file="file://$PROJECT_DIR$/testclery/celerytask_server.py" />
-    <entry file="file://$PROJECT_DIR$/AsyncioTest.py">
+    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/flask/logging.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        <state relative-caret-position="231">
+          <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testclery/testceleryapi.py" />
-    <entry file="file://$PROJECT_DIR$/testclery/celerytask_client.py" />
-    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/celery/app/task.py">
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/typing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="396" column="8" selection-start-line="396" selection-start-column="8" selection-end-line="396" selection-end-column="8" />
+        <state relative-caret-position="115">
+          <caret line="2318" column="18" selection-start-line="2318" selection-start-column="8" selection-end-line="2318" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/encoder.py">
+    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/werkzeug/serving.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2061">
-          <caret line="179" column="44" selection-start-line="179" selection-start-column="36" selection-end-line="179" selection-end-column="44" />
+        <state relative-caret-position="125">
+          <caret line="813" selection-start-line="813" selection-end-line="813" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CeleryConf/__init__.py">
+    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/dns/name.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="47" lean-forward="true" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+        <state relative-caret-position="140">
+          <caret line="768" selection-start-line="768" selection-end-line="768" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SSO/Config.py">
+    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/dns/resolver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        <state relative-caret-position="147">
+          <caret line="896" selection-start-line="896" selection-end-line="896" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EnumType/CommonEnum.py">
+    <entry file="file://$PROJECT_DIR$/ConsulConf/ConsulHelper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        <state relative-caret-position="225">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding>
-            <marker date="1541306848000" expanded="true" signature="69:70" ph="..." />
+            <marker date="1543216256000" expanded="true" signature="1034:1039" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Log/LogHelper_pb2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <caret line="200" lean-forward="true" selection-start-line="200" selection-end-line="200" />
+        <state relative-caret-position="189">
+          <caret line="174" selection-start-line="174" selection-end-line="174" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/vine/five.py">
+    <entry file="file://$PROJECT_DIR$/GRPCFlask/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socketserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="788">
+          <caret line="465" column="47" lean-forward="true" selection-start-line="465" selection-start-column="47" selection-end-line="465" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
-          <caret line="178" selection-start-line="178" selection-end-line="178" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Log/LogApi.py" />
-    <entry file="file://$PROJECT_DIR$/SSO/SSOVerifyUrl_pb2_grpc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          <caret line="923" column="20" lean-forward="true" selection-start-line="923" selection-start-column="20" selection-end-line="923" selection-end-column="20" />
           <folding>
-            <element signature="e#70#81#0" expanded="true" />
+            <element signature="e#220#229#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SSO/SSOVerifyLogin_pb2.py">
+    <entry file="file://$PROJECT_DIR$/uWSGI/Log.txt" />
+    <entry file="file://$PROJECT_DIR$/Log/LogHelper_pb2_grpc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        <state relative-caret-position="217">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SSO/SSOVerifyLogin_pb2_grpc.py">
+    <entry file="file://$PROJECT_DIR$/LogApi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding>
-            <element signature="e#70#81#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CeleryConf/CeleryConf.py">
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-2037505351/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="170">
+          <caret line="890" column="6" selection-start-line="890" selection-start-column="6" selection-end-line="890" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Common/CommonHelper.py">
+    <entry file="file://$PROJECT_DIR$/GRPCFlask/logClientLog.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/FlaskHelper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        <state relative-caret-position="210">
+          <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
           <folding>
             <element signature="e#24#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LogApi.py">
+    <entry file="file://$PROJECT_DIR$/GRPCFlask/LogFlask.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/redis/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="1950" lean-forward="true" selection-start-line="1950" selection-end-line="1951" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSO/SSOVerifyLogin_Client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSOVerifyLoginApi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSOVerifyApi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/grpc/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="1571" column="4" selection-start-line="1571" selection-start-column="4" selection-end-line="1571" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GRPCConsul/GrpcConsul_pb2_grpc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="208">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
           <folding>
-            <element signature="e#70#81#0" expanded="true" />
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1544877905000" expanded="true" signature="513:514" ph="..." />
+            <marker date="1544877905000" expanded="true" signature="1494:1497" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/dns/resolver.py">
+    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/flask_restful/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="582" column="13" selection-start-line="582" selection-start-column="13" selection-end-line="582" selection-end-column="13" />
+        <state relative-caret-position="161">
+          <caret line="443" selection-start-line="443" selection-end-line="443" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/consul/std.py">
+    <entry file="file://$PROJECT_DIR$/GRPCFlask/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="210">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GRPCConsul/GrpcConsulServer_node2.py">
+    <entry file="file://$PROJECT_DIR$/GRPCFlask/Log.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GRPCConsul/GrpcConsulServer_node3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/consul/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="843">
-          <caret line="896" column="45" lean-forward="true" selection-start-line="896" selection-start-column="45" selection-end-line="896" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/requests/adapters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="517" column="32" lean-forward="true" selection-start-line="517" selection-start-column="32" selection-end-line="517" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/grpc/_channel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="465" selection-start-line="465" selection-end-line="465" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ConsulConf/ConsulHelper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="42" lean-forward="true" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GRPCConsul/GrpcConsulServer_node1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-          <folding>
-            <element signature="e#25#36#0" expanded="true" />
-            <marker date="1542025333000" expanded="true" signature="453:458" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSO/SSOVerifyUrl_Server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <marker date="1542035513000" expanded="true" signature="349:1297" ph="..." />
-            <marker date="1542035513000" expanded="true" signature="1310:1314" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSO/SSOVerifyLogin_Server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="33" column="32" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="32" />
-          <folding>
-            <element signature="e#25#36#0" expanded="true" />
-            <marker date="1542035243000" expanded="true" signature="336:341" ph="..." />
-            <marker date="1542035243000" expanded="true" signature="1048:1053" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSO/SSOVerifyUrl_Client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-          <folding>
-            <element signature="e#25#36#0" expanded="true" />
-            <marker date="1541317094000" expanded="true" signature="193:526" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GRPCConsul/GrpcConsulClient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding>
-            <element signature="e#25#36#0" expanded="true" />
-            <marker date="1542014534000" expanded="true" signature="253:258" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Log/LogHelper_pb2_grpc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding>
-            <element signature="e#70#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/redis/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RedisOper/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RedisOper/RedisOperHelper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding>
-            <element signature="e#15#27#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Log/LogHelper_Server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+          <caret line="23" column="61" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EnumType/CommonEnum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/hashlib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="66" column="28" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/pymysql/cursors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="301" column="21" selection-start-line="301" selection-start-column="21" selection-end-line="301" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/pymysql/connections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="628" selection-start-line="628" selection-end-line="628" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="744" selection-start-line="744" selection-end-line="744" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="179" selection-start-line="179" selection-end-line="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="232" column="25" selection-start-line="232" selection-start-column="14" selection-end-line="232" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/celery/canvas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="101" column="57" selection-start-line="101" selection-start-column="50" selection-end-line="101" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/pip/_vendor/cachecontrol/caches/redis_cache.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="33" selection-start-line="8" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RedisOper/TestOutQueue.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RedisOper/RedisQueueHelper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
           <folding>
-            <element signature="e#25#36#0" expanded="true" />
+            <element signature="e#15#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GRPCConsul/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/pymysql/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Log/LogHelper_Client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        <state relative-caret-position="298">
+          <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding>
             <element signature="e#24#54#0" expanded="true" />
-            <marker date="1542036666000" expanded="true" signature="819:820" ph="..." />
-            <marker date="1542036666000" expanded="true" signature="1093:1095" ph="..." />
-            <marker date="1542036666000" expanded="true" signature="1120:1125" ph="..." />
-            <marker date="1542036666000" expanded="true" signature="1120:1429" ph="..." />
-            <marker date="1542036666000" expanded="true" signature="1223:1429" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/grpc/_channel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="472" column="57" lean-forward="true" selection-start-line="472" selection-start-column="57" selection-end-line="472" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSO/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSO/SSOVerifyLogin_pb2_grpc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Redis/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RedisOper/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+          <folding>
+            <element signature="e#15#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PySpiderVenv/lib/python3.6/site-packages/redis/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="960" selection-start-line="960" selection-end-line="960" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ConsulConf/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSO/SSOVerifyLogin_Client.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <caret line="11" column="45" lean-forward="true" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RedisOper/RedisOperHelper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="838">
+          <caret line="122" column="30" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
+          <folding>
+            <element signature="e#15#27#0" expanded="true" />
+            <marker date="1545114825000" expanded="true" signature="98:100" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RedisOper/RedisOperBase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="82" column="17" lean-forward="true" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
+          <folding>
+            <element signature="e#24#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSO/SSOVerifyLogin_Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="22" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSO/SSOVerifyUrl_Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSO/SSOVerifyUrl_Client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
         </state>
       </provider>
     </entry>

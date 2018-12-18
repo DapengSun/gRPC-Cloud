@@ -4,11 +4,12 @@ import sys
 sys.path.append('..')
 import grpc
 import time
-from SSO import SSOVerifyUrl_pb2,SSOVerifyUrl_pb2_grpc,cursor
+from SSO import SSOVerifyUrl_pb2,SSOVerifyUrl_pb2_grpc,cursor,dbArgs
 from concurrent import futures
 from SSO import Config
 from ConsulConf.ConsulHelper import Register,Unregister
 from ConsulConf import addr_ip
+from RedisOper import RedisOperBase
 
 class SSOVerifyUrl(SSOVerifyUrl_pb2_grpc.SSOVerifyUrlServicer):
     def VerifyUrl(self, request, context):
@@ -16,8 +17,10 @@ class SSOVerifyUrl(SSOVerifyUrl_pb2_grpc.SSOVerifyUrlServicer):
             _responseUrl = str.join('',[Config.VerifyLoginUrl, '?requesturl=', request.RequestUrl])
             if request.TicketId is not None and request.TicketId != '':
                 _sql = "Select * from TicketInfo Where TicketId = '%s'" % (request.TicketId)
-                cursor.execute(_sql)
-                _tickinfo = cursor.fetchone()
+                # cursor.execute(_sql)
+                # _tickinfo = cursor.fetchone()
+                _oper = RedisOperBase.redisOper()
+                _tickinfo = _oper.getSqlVal(_sql, 60000, **dbArgs)
 
                 if _tickinfo is not None:
                     return SSOVerifyUrl_pb2.VerifyOutResponse(Code=200, Message="验证成功", Content=request.TicketId)

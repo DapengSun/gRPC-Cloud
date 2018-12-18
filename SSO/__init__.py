@@ -2,5 +2,6 @@
 
 import pymysql
 
-db = pymysql.connect(host='localhost',user='root',password='sdmp',db='spider',port=3306)
+dbArgs = {'host':'localhost','user':'root','password':'sdmp','db':'spider','port':3306}
+db = pymysql.connect(**dbArgs)
 cursor = db.cursor()

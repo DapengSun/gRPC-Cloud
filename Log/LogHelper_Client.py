@@ -11,23 +11,36 @@ import json
 # from celery import Celery
 from CeleryConf import app
 from EnumType.CommonEnum import LogLevel
-from ConsulConf import ConsulHelper
+from ConsulConf import ConsulHelper,addr_ip
+
+num = 1
 
 @app.task(name='Log.LogHelper_Client.main')
 def main(Title,Content,LogLevel):
-    # print('start log')
-    ip, port = ConsulHelper.GetIpPort("Log_Server")
-    _channel = grpc.insecure_channel(f'{ip}:{port}')
-    _client = LogHelper_pb2_grpc.LogHelperStub(_channel)
-    # _hostName = socket.getfqdn(socket.gethostname())
-    # _ipAddr = socket.gethostbyname(_hostName)
-    _hostName = 'MyPC'
-    _ipAddr = f'{ip}:{port}'
+    try:
+        # print('start log')
+        ip = port = None
+        # ip, port = ConsulHelper.GetIpPort("Log_Server")
+        if ip == None and port == None:
+            ip = addr_ip
+            port = 8111
+        _channel = grpc.insecure_channel(f'{ip}:{port}')
+        _client = LogHelper_pb2_grpc.LogHelperStub(_channel)
+        # _hostName = socket.getfqdn(socket.gethostname())
+        # _ipAddr = socket.gethostbyname(_hostName)
+        _hostName = 'MyPC'
+        _ipAddr = f'{ip}:{port}'
 
-    _time = time.strftime('%Y-%m-%d %H:%M:%s',time.localtime())
-    _outResponse = _client.WriteLog(LogHelper_pb2.InRequest(IpAddr=_ipAddr, CDate=_time, Level=LogLevelTrans(LogLevel), Title=Title, Content=Content))
-    # print('end log')
-    return {"Code":_outResponse.Code,"Message":_outResponse.Message,"Content":_outResponse.Content}
+        # global num
+        # num += 1
+        # log(f"请求{num}", "请求内容")
+
+        _time = time.strftime('%Y-%m-%d %H:%M:%s',time.localtime())
+        _outResponse = _client.WriteLog(LogHelper_pb2.InRequest(IpAddr=_ipAddr, CDate=_time, Level=LogLevelTrans(LogLevel), Title=Title, Content=Content))
+        # print('end log')
+        return {"Code":_outResponse.Code,"Message":_outResponse.Message,"Content":_outResponse.Content}
+    except Exception as ex:
+        log(f"请求异常", ex)
 
 def FuncCallBack(future):
     # print(future.result())
@@ -42,6 +55,14 @@ def LogLevelTrans(Level):
     }
 
     return switch[Level]
+
+nowTime = lambda : time.strftime('%Y-%m-%d %H:%M:%s',time.localtime())
+filePath = './logClientLog.txt'
+
+def log(title,content):
+    now = nowTime()
+    with open(filePath,'a+') as file:
+        file.writelines(f'{now} - {title} - {content}\n')
 
 if __name__ == '__main__':
     # _future = futures.ThreadPoolExecutor(max_workers=1)
