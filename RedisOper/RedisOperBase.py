@@ -6,7 +6,7 @@ sys.path.append('..')
 import abc
 import hashlib
 import pymysql
-from RedisOper import oper
+# from RedisOper import oper
 
 class redisOperBase(metaclass=abc.ABCMeta):
     def getSqlVal(self,sql,expires=0,**dbArgs):
@@ -61,33 +61,6 @@ class redisOperBase(metaclass=abc.ABCMeta):
         key = hashlib.md5(sql.encode(encoding = 'UTF-8')).hexdigest()
         return key
 
-class redisOper(redisOperBase):
-    '''
-    缓存redis操作
-    '''
-    def getRedisData(self,key = None,val = None,expires = 0):
-        '''
-        实现-基类获取Redis数据并缓存的方法
-        :param key:redis key
-        :param val:redis value
-        :param expires:key 超时时间
-        :return:
-        '''
-        try:
-            if key == None:
-                return
-            # 获取Redis key的value
-            if val == None:
-                return oper.strGet(key)
-            # 设置Redis key的value
-            else:
-                oper.strSet(key,val)
-                if expires != 0:
-                    oper.setKeyExpires(key,expires)
-        except Exception as ex:
-            print(ex)
-
-
 class CJsonEncoder(json.JSONEncoder):
     '''
     json.dumps的自定义处理 解决datetime无法序列化问题
@@ -99,10 +72,3 @@ class CJsonEncoder(json.JSONEncoder):
             return obj.strftime('%Y-%m-%d')
         else:
             return json.JSONEncoder.default(self, obj)
-
-if __name__ == '__main__':
-    sql = 'select LoginName,NickName,PassWord,Phone,CDate,Email from accountinfo'
-    redisOper = redisOper()
-    dbArgs = {'host':'localhost','user':'root','password':'sdmp','db':'spider','port':3306}
-    res = redisOper.getSqlVal(sql,expires=60000,**dbArgs)
-    print(res)

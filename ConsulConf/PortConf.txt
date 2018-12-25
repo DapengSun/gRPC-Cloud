@@ -1,0 +1,7 @@
+Grpc-SSO      SSOVerifyUrl_Server     : 8105
+
+Grpc-SSO      SSOVerifyLogin_Server   : 8106
+
+Grpc-Redis    RedisHelper_Server      : 8107
+
+Grpc-Log      LogHelper_Server        : 8111

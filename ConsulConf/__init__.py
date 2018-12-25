@@ -7,7 +7,7 @@ from dns import resolver
 
 # 连接服务配置
 # consul_host = '192.168.0.192'
-consul_host = '192.168.7.151'
+consul_host = '192.168.7.68'
 # consul_host = '127.0.0.1'
 consul_post = 8500
 
@@ -22,5 +22,5 @@ beat_check_tcp = '10s'
 
 # 主机IP地址
 # addr_ip = '192.168.0.192'
-addr_ip = '192.168.7.151'
+addr_ip = '192.168.7.65'
 # addr_ip = '127.0.0.1'

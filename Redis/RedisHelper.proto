@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+service RedisHelper{
+	rpc RedisCacheStr(RedisCacheStrRequest) returns (RedisCacheResponse){}
+	rpc GetSqlValue(RedisCacheSQLRequest) returns (RedisCacheResponse){}
+}
+
+// str写入redis缓存 传入参数
+message RedisCacheStrRequest {
+    string Key = 1;
+    string Value = 2;
+    int32 Expire = 3;
+}
+
+// 获取SQL值并缓存结果 
+message RedisCacheSQLRequest {
+    string SQL = 1;
+    int32 Expire = 2;
+    DbConnArgs ConnArgs = 3;
+}
+
+// 数据库连接类
+message DbConnArgs{
+	string Host = 1;
+	string User = 2;
+	string PassWord = 3;
+	string Db = 4;
+	int32 Port = 5;
+}
+
+//写redis缓存 返回参数
+message RedisCacheResponse {
+ 	int32 Code = 1;
+	string Message = 2;
+	string Content = 3;
+}

@@ -20,6 +20,7 @@ class LogHelper(LogHelper_pb2_grpc.LogHelperServicer):
             _title = request.Title
             _content = request.Content
             _logId = Tool.GetGuid()
+            # time.sleep(2)
             oper.hashHmset(_logId,{"IpAddr":_ip,"CDate":_cDate,"Level":_level,"Title":_title,"Content":_content})
             return LogHelper_pb2.OutResponse(Code=200,Message="日志记录成功",Content="")
         except Exception as ex:

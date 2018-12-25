@@ -3,9 +3,12 @@
 import redis
 import time
 from EnumType import CommonEnum
+import sys
+sys.path.append('..')
 # from RedisOper import db
+from RedisOper.RedisOperBase import redisOperBase
 
-class RedisOperHelper(object):
+class RedisOperHelper(redisOperBase):
     def __init__(self,db):
         # pool = redis.ConnectionPool(host='localhost', port=6379, decode_responses=True)
         # self.db = redis.Redis(connection_pool=pool)
@@ -147,3 +150,35 @@ class RedisOperHelper(object):
     # 设置key的过期时间
     def setKeyExpires(self,key,expires):
         return self.db.expire(key,expires)
+
+    def getRedisData(self, key=None, val=None, expires=0):
+        '''
+        实现-基类获取Redis数据并缓存的方法
+        :param key:redis key
+        :param val:redis value
+        :param expires:key 超时时间
+        :return:
+        '''
+        try:
+            if key == None:
+                return
+            # 获取Redis key的value
+            if val == None:
+                return self.strGet(key)
+            # 设置Redis key的value
+            else:
+                self.strSet(key, val)
+                if expires != 0:
+                    self.setKeyExpires(key, expires)
+        except Exception as ex:
+            print(ex)
+
+if __name__ == '__main__':
+    sql = 'select LoginName,NickName,PassWord,Phone,CDate,Email from accountinfo'
+    import redis
+    pool = redis.ConnectionPool(host='localhost', port=6379, decode_responses=True, db=6)
+    db = redis.Redis(connection_pool=pool)
+    redisOper = RedisOperHelper(db)
+    dbArgs = {'host':'localhost','user':'root','password':'sdmp','db':'spider','port':3306}
+    res = redisOper.getSqlVal(sql,expires=60000,**dbArgs)
+    print(res)
