@@ -19,35 +19,35 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x11RedisHelper.proto\"B\n\x14RedisCacheStrRequest\x12\x0b\n\x03Key\x18\x01 \x01(\t\x12\r\n\x05Value\x18\x02 \x01(\t\x12\x0e\n\x06\x45xpire\x18\x03 \x01(\x05\"R\n\x14RedisCacheSQLRequest\x12\x0b\n\x03SQL\x18\x01 \x01(\t\x12\x0e\n\x06\x45xpire\x18\x02 \x01(\x05\x12\x1d\n\x08\x43onnArgs\x18\x03 \x01(\x0b\x32\x0b.DbConnArgs\"T\n\nDbConnArgs\x12\x0c\n\x04Host\x18\x01 \x01(\t\x12\x0c\n\x04User\x18\x02 \x01(\t\x12\x10\n\x08PassWord\x18\x03 \x01(\t\x12\n\n\x02\x44\x62\x18\x04 \x01(\t\x12\x0c\n\x04Port\x18\x05 \x01(\x05\"D\n\x12RedisCacheResponse\x12\x0c\n\x04\x43ode\x18\x01 \x01(\x05\x12\x0f\n\x07Message\x18\x02 \x01(\t\x12\x0f\n\x07\x43ontent\x18\x03 \x01(\t2\x89\x01\n\x0bRedisHelper\x12=\n\rRedisCacheStr\x12\x15.RedisCacheStrRequest\x1a\x13.RedisCacheResponse\"\x00\x12;\n\x0bGetSqlValue\x12\x15.RedisCacheSQLRequest\x1a\x13.RedisCacheResponse\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x11RedisHelper.proto\"?\n\x11RedisCacheRequest\x12\x0b\n\x03Key\x18\x01 \x01(\t\x12\r\n\x05Value\x18\x02 \x01(\t\x12\x0e\n\x06\x45xpire\x18\x03 \x01(\x05\"Q\n\x15RedisCacheHashRequest\x12\x0b\n\x03Key\x18\x01 \x01(\t\x12\x0c\n\x04Name\x18\x02 \x01(\t\x12\r\n\x05Value\x18\x03 \x01(\t\x12\x0e\n\x06\x45xpire\x18\x04 \x01(\x05\"L\n\x1cRedisCacheHashMappingRequest\x12\x0b\n\x03Key\x18\x01 \x01(\t\x12\x0f\n\x07Mapping\x18\x02 \x01(\t\x12\x0e\n\x06\x45xpire\x18\x03 \x01(\x05\"R\n\x14RedisCacheSQLRequest\x12\x0b\n\x03SQL\x18\x01 \x01(\t\x12\x0e\n\x06\x45xpire\x18\x02 \x01(\x05\x12\x1d\n\x08\x43onnArgs\x18\x03 \x01(\x0b\x32\x0b.DbConnArgs\"T\n\nDbConnArgs\x12\x0c\n\x04Host\x18\x01 \x01(\t\x12\x0c\n\x04User\x18\x02 \x01(\t\x12\x10\n\x08PassWord\x18\x03 \x01(\t\x12\n\n\x02\x44\x62\x18\x04 \x01(\t\x12\x0c\n\x04Port\x18\x05 \x01(\x05\"D\n\x12RedisCacheResponse\x12\x0c\n\x04\x43ode\x18\x01 \x01(\x05\x12\x0f\n\x07Message\x18\x02 \x01(\t\x12\x0f\n\x07\x43ontent\x18\x03 \x01(\t2\xd3\x02\n\x0bRedisHelper\x12:\n\rRedisCacheStr\x12\x12.RedisCacheRequest\x1a\x13.RedisCacheResponse\"\x00\x12;\n\x0eRedisCacheList\x12\x12.RedisCacheRequest\x1a\x13.RedisCacheResponse\"\x00\x12?\n\x0eRedisCacheHash\x12\x16.RedisCacheHashRequest\x1a\x13.RedisCacheResponse\"\x00\x12M\n\x15RedisCacheHashMapping\x12\x1d.RedisCacheHashMappingRequest\x1a\x13.RedisCacheResponse\"\x00\x12;\n\x0bGetSqlValue\x12\x15.RedisCacheSQLRequest\x1a\x13.RedisCacheResponse\"\x00\x62\x06proto3')
 )
 
 
 
 
-_REDISCACHESTRREQUEST = _descriptor.Descriptor(
-  name='RedisCacheStrRequest',
-  full_name='RedisCacheStrRequest',
+_REDISCACHEREQUEST = _descriptor.Descriptor(
+  name='RedisCacheRequest',
+  full_name='RedisCacheRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='Key', full_name='RedisCacheStrRequest.Key', index=0,
+      name='Key', full_name='RedisCacheRequest.Key', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='Value', full_name='RedisCacheStrRequest.Value', index=1,
+      name='Value', full_name='RedisCacheRequest.Value', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='Expire', full_name='RedisCacheStrRequest.Expire', index=2,
+      name='Expire', full_name='RedisCacheRequest.Expire', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -66,7 +66,104 @@ _REDISCACHESTRREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=21,
-  serialized_end=87,
+  serialized_end=84,
+)
+
+
+_REDISCACHEHASHREQUEST = _descriptor.Descriptor(
+  name='RedisCacheHashRequest',
+  full_name='RedisCacheHashRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Key', full_name='RedisCacheHashRequest.Key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Name', full_name='RedisCacheHashRequest.Name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Value', full_name='RedisCacheHashRequest.Value', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Expire', full_name='RedisCacheHashRequest.Expire', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=86,
+  serialized_end=167,
+)
+
+
+_REDISCACHEHASHMAPPINGREQUEST = _descriptor.Descriptor(
+  name='RedisCacheHashMappingRequest',
+  full_name='RedisCacheHashMappingRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Key', full_name='RedisCacheHashMappingRequest.Key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Mapping', full_name='RedisCacheHashMappingRequest.Mapping', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Expire', full_name='RedisCacheHashMappingRequest.Expire', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=169,
+  serialized_end=245,
 )
 
 
@@ -110,8 +207,8 @@ _REDISCACHESQLREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=89,
-  serialized_end=171,
+  serialized_start=247,
+  serialized_end=329,
 )
 
 
@@ -169,8 +266,8 @@ _DBCONNARGS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=173,
-  serialized_end=257,
+  serialized_start=331,
+  serialized_end=415,
 )
 
 
@@ -214,23 +311,39 @@ _REDISCACHERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=259,
-  serialized_end=327,
+  serialized_start=417,
+  serialized_end=485,
 )
 
 _REDISCACHESQLREQUEST.fields_by_name['ConnArgs'].message_type = _DBCONNARGS
-DESCRIPTOR.message_types_by_name['RedisCacheStrRequest'] = _REDISCACHESTRREQUEST
+DESCRIPTOR.message_types_by_name['RedisCacheRequest'] = _REDISCACHEREQUEST
+DESCRIPTOR.message_types_by_name['RedisCacheHashRequest'] = _REDISCACHEHASHREQUEST
+DESCRIPTOR.message_types_by_name['RedisCacheHashMappingRequest'] = _REDISCACHEHASHMAPPINGREQUEST
 DESCRIPTOR.message_types_by_name['RedisCacheSQLRequest'] = _REDISCACHESQLREQUEST
 DESCRIPTOR.message_types_by_name['DbConnArgs'] = _DBCONNARGS
 DESCRIPTOR.message_types_by_name['RedisCacheResponse'] = _REDISCACHERESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-RedisCacheStrRequest = _reflection.GeneratedProtocolMessageType('RedisCacheStrRequest', (_message.Message,), dict(
-  DESCRIPTOR = _REDISCACHESTRREQUEST,
+RedisCacheRequest = _reflection.GeneratedProtocolMessageType('RedisCacheRequest', (_message.Message,), dict(
+  DESCRIPTOR = _REDISCACHEREQUEST,
   __module__ = 'RedisHelper_pb2'
-  # @@protoc_insertion_point(class_scope:RedisCacheStrRequest)
+  # @@protoc_insertion_point(class_scope:RedisCacheRequest)
   ))
-_sym_db.RegisterMessage(RedisCacheStrRequest)
+_sym_db.RegisterMessage(RedisCacheRequest)
+
+RedisCacheHashRequest = _reflection.GeneratedProtocolMessageType('RedisCacheHashRequest', (_message.Message,), dict(
+  DESCRIPTOR = _REDISCACHEHASHREQUEST,
+  __module__ = 'RedisHelper_pb2'
+  # @@protoc_insertion_point(class_scope:RedisCacheHashRequest)
+  ))
+_sym_db.RegisterMessage(RedisCacheHashRequest)
+
+RedisCacheHashMappingRequest = _reflection.GeneratedProtocolMessageType('RedisCacheHashMappingRequest', (_message.Message,), dict(
+  DESCRIPTOR = _REDISCACHEHASHMAPPINGREQUEST,
+  __module__ = 'RedisHelper_pb2'
+  # @@protoc_insertion_point(class_scope:RedisCacheHashMappingRequest)
+  ))
+_sym_db.RegisterMessage(RedisCacheHashMappingRequest)
 
 RedisCacheSQLRequest = _reflection.GeneratedProtocolMessageType('RedisCacheSQLRequest', (_message.Message,), dict(
   DESCRIPTOR = _REDISCACHESQLREQUEST,
@@ -261,22 +374,49 @@ _REDISHELPER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=330,
-  serialized_end=467,
+  serialized_start=488,
+  serialized_end=827,
   methods=[
   _descriptor.MethodDescriptor(
     name='RedisCacheStr',
     full_name='RedisHelper.RedisCacheStr',
     index=0,
     containing_service=None,
-    input_type=_REDISCACHESTRREQUEST,
+    input_type=_REDISCACHEREQUEST,
+    output_type=_REDISCACHERESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='RedisCacheList',
+    full_name='RedisHelper.RedisCacheList',
+    index=1,
+    containing_service=None,
+    input_type=_REDISCACHEREQUEST,
+    output_type=_REDISCACHERESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='RedisCacheHash',
+    full_name='RedisHelper.RedisCacheHash',
+    index=2,
+    containing_service=None,
+    input_type=_REDISCACHEHASHREQUEST,
+    output_type=_REDISCACHERESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='RedisCacheHashMapping',
+    full_name='RedisHelper.RedisCacheHashMapping',
+    index=3,
+    containing_service=None,
+    input_type=_REDISCACHEHASHMAPPINGREQUEST,
     output_type=_REDISCACHERESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
     name='GetSqlValue',
     full_name='RedisHelper.GetSqlValue',
-    index=1,
+    index=4,
     containing_service=None,
     input_type=_REDISCACHESQLREQUEST,
     output_type=_REDISCACHERESPONSE,

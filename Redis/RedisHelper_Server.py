@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import json
 import time
 import grpc
 import sys
@@ -31,6 +32,74 @@ class RedisHelper(RedisHelper_pb2_grpc.RedisHelperServicer):
         except Exception as ex:
             return RedisHelper_pb2.RedisCacheResponse(Code=500,Message=f'缓存Redis值异常:{ex}',Content="")
 
+    def RedisCacheList(self, request, context):
+        '''
+        缓存List值入redis
+        :param request:请求对象
+        :param context:上下文
+        :return:缓存结果
+        '''
+        try:
+            key = request.Key
+            value = request.Value
+            expire = request.Expire
+
+            if key == None or value == None:
+                raise Exception('参数异常')
+
+            oper.queuePut(key,value)
+            if expire != 0:
+                oper.setKeyExpires(key,expire)
+            return RedisHelper_pb2.RedisCacheResponse(Code=200,Message="缓存Redis List值成功！",Content="")
+        except Exception as ex:
+            return RedisHelper_pb2.RedisCacheResponse(Code=500,Message=f'缓存Redis List值异常:{ex}',Content="")
+
+    def RedisCacheHash(self, request, context):
+        '''
+        缓存Hash值入redis
+        :param request:请求对象
+        :param context:上下文
+        :return:缓存结果
+        '''
+        try:
+            key = request.Key
+            value = request.Value
+            name = request.Name
+            expire = request.Expire
+
+            if key == None or value == None:
+                raise Exception('参数异常')
+
+            oper.hashHset(key,name,value)
+            if expire != 0:
+                oper.setKeyExpires(key,expire)
+            return RedisHelper_pb2.RedisCacheResponse(Code=200,Message="缓存Redis Hash值成功！",Content="")
+        except Exception as ex:
+            return RedisHelper_pb2.RedisCacheResponse(Code=500,Message=f'缓存Redis Hash值异常:{ex}',Content="")
+
+    def RedisCacheHashMapping(self, request, context):
+        '''
+        缓存Hash Mapping值入redis
+        :param request:请求对象 Mapping-JSON格式的Dict类型数据
+        :param context:上下文
+        :return:缓存结果
+        '''
+        try:
+            key = request.Key
+            mappingJson = request.Mapping
+            expire = request.Expire
+
+            if key == None or mappingJson == None:
+                raise Exception('参数异常')
+
+            mapping = json.loads(mappingJson)
+            oper.hashHmset(key,mapping)
+            if expire != 0:
+                oper.setKeyExpires(key,expire)
+            return RedisHelper_pb2.RedisCacheResponse(Code=200,Message="缓存Redis Hash值成功！",Content="")
+        except Exception as ex:
+            return RedisHelper_pb2.RedisCacheResponse(Code=500,Message=f'缓存Redis Hash值异常:{ex}',Content="")
+
     def GetSqlValue(self, request, context):
         '''
         获取SQL值并缓存结果
@@ -47,6 +116,7 @@ class RedisHelper(RedisHelper_pb2_grpc.RedisHelperServicer):
                 raise Exception('参数异常')
 
             dbArgs = {'host': conn.Host, 'user': conn.User, 'password': conn.PassWord, 'db': conn.Db, 'port': conn.Port}
+            # dbArgs = conn['args']
             res = oper.getSqlVal(sql,expire,**dbArgs)
             return RedisHelper_pb2.RedisCacheResponse(Code=200, Message="缓存Redis值成功！", Content=f"{res}")
         except Exception as ex:

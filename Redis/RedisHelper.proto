@@ -1,16 +1,35 @@
 syntax = "proto3";
 
 service RedisHelper{
-	rpc RedisCacheStr(RedisCacheStrRequest) returns (RedisCacheResponse){}
+	rpc RedisCacheStr(RedisCacheRequest) returns (RedisCacheResponse){}
+	rpc RedisCacheList(RedisCacheRequest) returns (RedisCacheResponse){}
+	rpc RedisCacheHash(RedisCacheHashRequest) returns (RedisCacheResponse){}
+	rpc RedisCacheHashMapping(RedisCacheHashMappingRequest) returns (RedisCacheResponse){}
 	rpc GetSqlValue(RedisCacheSQLRequest) returns (RedisCacheResponse){}
 }
 
-// str写入redis缓存 传入参数
-message RedisCacheStrRequest {
+// Str、List写入redis缓存 传入参数
+message RedisCacheRequest {
     string Key = 1;
     string Value = 2;
     int32 Expire = 3;
 }
+
+// Hash写入redis缓存 传入参数
+message RedisCacheHashRequest {
+    string Key = 1;
+    string Name = 2;
+    string Value = 3;
+    int32 Expire = 4;
+}
+
+// Hash Mapping写入redis缓存 传入参数
+message RedisCacheHashMappingRequest {
+    string Key = 1;
+    string Mapping = 2;
+    int32 Expire = 3;
+}
+
 
 // 获取SQL值并缓存结果 
 message RedisCacheSQLRequest {
